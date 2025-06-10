@@ -1,153 +1,123 @@
 :root {
-    --accent: #1A3861;
-    --text: #0f2138;
+  --clr-primary: #1a3861;
+  --clr-bg: #ffffff;
+  --ff-base: 'Nunito Sans', sans-serif;
 }
 
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: 'Inter', 'Nunito Sans', sans-serif;
-    color: var(--text);
-    background: #fff;
-    line-height: 1.6;
+  margin: 0;
+  font-family: var(--ff-base);
+  background-color: var(--clr-bg);
+  color: var(--clr-primary);
+  line-height: 1.6;
 }
 
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem;
 }
 
-@media (max-width: 768px) {
-    .wrapper {
-        padding: 16px;
-    }
+header {
+  background-color: var(--clr-bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--clr-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(26, 56, 97, 0.1);
 }
 
 .hero {
-    background: #f5f7fa;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
-}
-
-.hero-content > * {
-    grid-column: 2 / span 8;
-}
-
-@media (max-width: 768px) {
-    .hero-content {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .hero-content > * {
-        grid-column: 1 / -1;
-    }
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin: 0 0 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  padding: 4rem 0 2rem;
 }
 
 .cta {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 700;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.about {
-    padding: 60px 0;
-}
-
-.grid-12 {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
-}
-
-.about-text {
-    grid-column: span 6;
+.cta:hover,
+.cta:focus {
+  background-color: #14263f;
 }
 
 .features {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.card {
+  grid-column: span 3;
+  padding: 1rem;
+  background-color: var(--clr-bg);
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .features .card {
     grid-column: span 6;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+  }
 }
 
-.feature {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-}
-
-.feature .icon {
-    font-size: 2rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-    .about-text,
-    .features {
-        grid-column: 1 / -1;
-    }
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.how {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-bottom: 2rem;
-}
-
-.step {
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .steps {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-}
-
-.center {
-    text-align: center;
-    margin-top: 2rem;
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .features .card {
+    grid-column: span 12;
+  }
 }
 
 footer {
-    text-align: center;
-    padding: 40px 0;
-    background: #f5f7fa;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
