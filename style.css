@@ -41,3 +41,16 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.875rem;
 }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.service {
+  padding: 1rem;
+  border: 1px solid var(--clr-primary);
+  border-radius: 3px;
+}
