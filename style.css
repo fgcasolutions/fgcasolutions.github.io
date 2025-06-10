@@ -1,12 +1,18 @@
+:root {
+    --dark: #1b1a5a;
+    --primary: #1a94f3;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     line-height: 1.6;
     color: #333;
+    background: #fff;
 }
 
 header {
-    background: #111;
+    background: var(--dark);
     color: #fff;
     padding: 1rem 2rem;
     position: sticky;
@@ -24,8 +30,20 @@ header nav a {
     font-size: 1.2rem;
 }
 
+main {
+    padding: 2rem;
+}
+
 section {
-    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    margin-top: 0;
 }
 
 h1 {
@@ -35,20 +53,68 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .cta {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background: linear-gradient(45deg, #6a0dad, #00aaff);
+    background: var(--primary);
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: opacity 0.3s ease;
 }
 
 .cta:hover {
-    opacity: 0.8;
+    opacity: 0.85;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--dark);
+    font-size: 1.4rem;
+}
+
+.card .more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card .more:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
 }

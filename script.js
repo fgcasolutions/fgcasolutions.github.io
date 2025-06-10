@@ -9,3 +9,15 @@ navLinks.forEach(link => {
     }
   });
 });
+
+// Make entire cards clickable
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+  const link = card.dataset.link;
+  if (link) {
+    card.addEventListener('click', () => {
+      window.location.href = link;
+    });
+    card.style.cursor = 'pointer';
+  }
+});
