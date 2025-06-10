@@ -10,14 +10,10 @@ navLinks.forEach(link => {
   });
 });
 
-// Make entire cards clickable
+// Simple highlight effect when a card is clicked
 const cards = document.querySelectorAll('.card');
 cards.forEach(card => {
-  const link = card.dataset.link;
-  if (link) {
-    card.addEventListener('click', () => {
-      window.location.href = link;
-    });
-    card.style.cursor = 'pointer';
-  }
+  card.addEventListener('click', () => {
+    card.classList.toggle('active');
+  });
 });

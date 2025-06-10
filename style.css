@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: var(--dark);
+    background: linear-gradient(90deg, var(--dark), var(--primary));
     color: #fff;
     padding: 1rem 2rem;
     position: sticky;
@@ -73,10 +73,10 @@ h2 {
 }
 
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-items: stretch;
 }
 
 .card {
@@ -84,7 +84,7 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
-    width: 280px;
+    width: 100%;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -94,27 +94,44 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.card.active {
+    background: var(--primary);
+    color: #fff;
+}
+
 .card h3 {
     margin-top: 0;
     color: var(--dark);
     font-size: 1.4rem;
 }
 
-.card .more {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.card .more:hover {
-    text-decoration: underline;
-}
 
 footer {
-    background: var(--dark);
+    background: linear-gradient(90deg, var(--dark), var(--primary));
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.service-table th,
+.service-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.service-table th {
+    background: var(--primary);
+    color: #fff;
+}
+
+.center {
+    text-align: center;
+    margin: 2rem 0;
 }
