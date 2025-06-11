@@ -42,6 +42,10 @@ footer {
   font-size: 0.875rem;
 }
 
+ qhe14h-codex/add-4-non-clickable-grids-below-quote-button
+
+ ujgl5j-codex/add-4-non-clickable-grids-below-quote-button
+main
 .detail {
   max-width: 600px;
   margin: 0 auto 2rem;
@@ -50,12 +54,24 @@ footer {
 
 .services {
   display: grid;
+ qhe14h-codex/add-4-non-clickable-grids-below-quote-button
+
+
+.services {
+  display: grid;
+6wf251-codex/add-4-non-clickable-grids-below-quote-button
+ main
+ main
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 2rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+ qhe14h-codex/add-4-non-clickable-grids-below-quote-button
+
+ujgl5j-codex/add-4-non-clickable-grids-below-quote-button
+ main
 }
 
 .service {
@@ -74,6 +90,26 @@ footer {
 
 .service:visited {
   color: var(--clr-primary);
+ qhe14h-codex/add-4-non-clickable-grids-below-quote-button
+
+
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+main
+}
+
+.service {
+  padding: 1rem;
+  border: 1px solid var(--clr-primary);
+  border-radius: 3px;
+6wf251-codex/add-4-non-clickable-grids-below-quote-button
+  background-color: #f0f4fa;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  cursor: default;
+main
+main
 }
 
 .service:hover {
@@ -83,6 +119,7 @@ footer {
 .service:active {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+ qhe14h-codex/add-4-non-clickable-grids-below-quote-button
 }
 
 .info-grid {
@@ -104,4 +141,11 @@ footer {
   border-radius: 3px;
   background-color: #f0f4fa;
   color: var(--clr-primary);
+
+ ujgl5j-codex/add-4-non-clickable-grids-below-quote-button
+
+
+main
+ main
+ main
 }
