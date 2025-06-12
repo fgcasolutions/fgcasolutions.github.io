@@ -1,0 +1,38 @@
+# GraphQL schema for Financely live ticker
+
+type Deal {
+  id: ID!
+  name: String!
+  status: String!
+}
+
+type Attachment {
+  id: ID!
+  dealId: ID!
+  url: String!
+}
+
+type Score {
+  dealId: ID!
+  value: Int!
+}
+
+type Query {
+  deals: [Deal!]!
+  attachments(dealId: ID!): [Attachment!]!
+  scores(dealId: ID!): Score!
+}
+
+type Mutation {
+  createDeal(name: String!): Deal!
+  updateDeal(id: ID!, name: String, status: String): Deal!
+}
+
+# Each subscription field is tagged with @live and throttled to 250 ms
+# Actual throttling handled in resolvers
+
+type Subscription {
+  dealUpdates(dealId: ID!): Deal! @live
+  attachmentUpdates(dealId: ID!): Attachment! @live
+  scoreUpdates(dealId: ID!): Score! @live
+}

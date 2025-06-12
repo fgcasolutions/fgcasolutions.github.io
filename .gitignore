@@ -1,3 +1,38 @@
+ codex/generate-monorepo-for-financely-ui-and-backend
 node_modules
 dist
 .env
+codex/create-notification-service-package
+notification-service/node_modules/
+notification-service/dist/
+
+ o4oufg-codex/generate-monorepo-for-financely-project
+
+codex/implement-deal-service-package-with-apollo,-nats,-postgres,
+node_modules/
+ main
+# Node
+node_modules/
+.financely
+**/dist/
+o4oufg-codex/generate-monorepo-for-financely-project
+**/build/
+# Logs
+
+**/build/# Logs
+main
+logs
+*.log
+npm-debug.log*
+# Env
+.env
+**/*.env
+# OS
+.DS_Store
+Thumbs.db
+ o4oufg-codex/generate-monorepo-for-financely-project
+
+ main
+ main
+ main
+main

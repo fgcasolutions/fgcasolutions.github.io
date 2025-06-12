@@ -1,0 +1,28 @@
+{
+  "name": "financely-live-ticker-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node server/index.ts",
+    "storybook": "start-storybook -p 6006"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.0.0",
+    "@graphql-tools/schema": "^9.0.0",
+    "graphql": "^16.0.0",
+    "graphql-subscriptions": "^2.0.0",
+    "nats": "^2.12.0",
+    "ws": "^8.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-query": "^3.39.0",
+    "react-use-websocket": "^4.0.0",
+    "zustand": "^4.1.5",
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^7.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}
