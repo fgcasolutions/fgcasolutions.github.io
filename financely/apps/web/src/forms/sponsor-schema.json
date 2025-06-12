@@ -1,0 +1,12 @@
+{
+  "title": "Sponsor Intake",
+  "steps": [
+    {
+      "name": "basic",
+      "fields": [
+        { "name": "company", "type": "text", "label": "Company Name", "yup": {"required": true} },
+        { "name": "email", "type": "email", "label": "Contact Email", "yup": {"required": true, "email": true} }
+      ]
+    }
+  ]
+}

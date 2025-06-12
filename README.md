@@ -5,6 +5,11 @@ This repository hosts a simple landing page for Financely. The site contains a s
 
 This repository hosts a simple landing page for Financely. The site contains a single hero section with a call-to-action link and a disclaimer footer.
 
+ codex/generate-monorepo-for-financely-ui-and-backend
+## Monorepo
+
+The `financely` directory contains a minimal scaffold for a production-ready platform including a React web app, GraphQL API, Go worker, notification service and infrastructure templates.
+
 codex/revamp-financely-blueprint-for-live-ticker
 ## Live Ticker Blueprint (Prototype)
 
@@ -33,3 +38,4 @@ The `financely/` directory contains a sample implementation of Financely's platf
  main
  main
 main
+ main

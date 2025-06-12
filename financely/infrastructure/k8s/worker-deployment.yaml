@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: matcher-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: matcher-worker
+  template:
+    metadata:
+      labels:
+        app: matcher-worker
+    spec:
+      containers:
+        - name: worker
+          image: financely-worker:latest
+          args: []

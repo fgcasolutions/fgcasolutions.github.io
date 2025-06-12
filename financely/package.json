@@ -2,6 +2,10 @@
   "name": "financely-monorepo",
   "private": true,
   "workspaces": [
+ codex/generate-monorepo-for-financely-ui-and-backend
+    "apps/*"
+  ]
+
     "packages/*"
   ],
   "scripts": {
@@ -18,4 +22,5 @@
     "prettier": "^2.8.8",
     "typescript": "^5.2.2"
   }
+main
 }

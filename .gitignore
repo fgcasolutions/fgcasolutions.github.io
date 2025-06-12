@@ -1,3 +1,7 @@
+ codex/generate-monorepo-for-financely-ui-and-backend
+node_modules
+dist
+.env
 codex/create-notification-service-package
 notification-service/node_modules/
 notification-service/dist/
@@ -31,3 +35,4 @@ Thumbs.db
  main
  main
  main
+main
