@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financely</title>
+  <style>
+    :root {
+      --font-primary: 'Financely Sans', sans-serif;
+      --color-navy: #0d1b2a;
+      --color-muted-green: #1b5845;
+    }
+    @font-face {
+      font-family: 'Financely Sans';
+      src: url('/assets/fonts/FinancelySans.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    body {
+      font-family: var(--font-primary);
+    }
+    h1, h2, h3, h4 {
+      color: var(--color-navy);
+    }
+    a {
+      color: var(--color-muted-green);
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

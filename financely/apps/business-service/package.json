@@ -1,0 +1,20 @@
+{
+  "name": "business-service",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "lint": "eslint src --ext ts"
+  },
+  "dependencies": {
+    "nats": "^2.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "ts-node": "^10.9.1",
+    "@types/node": "^18.11.9",
+    "eslint": "^8.27.0"
+  }
+}

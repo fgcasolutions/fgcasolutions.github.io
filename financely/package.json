@@ -1,0 +1,7 @@
+{
+  "name": "financely-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}

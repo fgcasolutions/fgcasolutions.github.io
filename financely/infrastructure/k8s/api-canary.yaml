@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-canary
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+      track: canary
+  template:
+    metadata:
+      labels:
+        app: api
+        track: canary
+    spec:
+      containers:
+        - name: api
+          image: financely-api:canary
+          ports:
+            - containerPort: 4000
