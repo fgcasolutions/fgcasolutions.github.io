@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:15
+          env:
+            - name: POSTGRES_PASSWORD
+              value: example
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elasticsearch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elasticsearch
+  template:
+    metadata:
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+        - name: elasticsearch
+          image: elasticsearch:8.11.1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clickhouse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clickhouse
+  template:
+    metadata:
+      labels:
+        app: clickhouse
+    spec:
+      containers:
+        - name: clickhouse
+          image: yandex/clickhouse-server:latest
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nats
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nats
+  template:
+    metadata:
+      labels:
+        app: nats
+    spec:
+      containers:
+        - name: nats
+          image: nats:2.10
+          ports:
+            - containerPort: 4222
