@@ -1,3 +1,7 @@
+codex/create-notification-service-package
+notification-service/node_modules/
+notification-service/dist/
+
  o4oufg-codex/generate-monorepo-for-financely-project
 
 codex/implement-deal-service-package-with-apollo,-nats,-postgres,
@@ -24,5 +28,6 @@ npm-debug.log*
 Thumbs.db
  o4oufg-codex/generate-monorepo-for-financely-project
 
+ main
  main
  main
