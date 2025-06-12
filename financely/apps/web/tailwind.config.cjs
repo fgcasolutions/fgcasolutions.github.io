@@ -6,7 +6,7 @@ module.exports = {
         sans: ['var(--font-primary)', 'sans-serif'],
       },
       colors: {
-        navy: '#0d1b2a',
+        navy: '#1b1a5a',
         'muted-green': '#1b5845',
       },
     },
