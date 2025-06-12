@@ -1,0 +1,28 @@
+ o4oufg-codex/generate-monorepo-for-financely-project
+
+codex/implement-deal-service-package-with-apollo,-nats,-postgres,
+node_modules/
+ main
+# Node
+node_modules/
+.financely
+**/dist/
+o4oufg-codex/generate-monorepo-for-financely-project
+**/build/
+# Logs
+
+**/build/# Logs
+main
+logs
+*.log
+npm-debug.log*
+# Env
+.env
+**/*.env
+# OS
+.DS_Store
+Thumbs.db
+ o4oufg-codex/generate-monorepo-for-financely-project
+
+ main
+ main
