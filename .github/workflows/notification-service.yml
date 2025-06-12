@@ -1,0 +1,28 @@
+name: Notification Service CI
+
+on:
+  push:
+    paths:
+      - 'notification-service/**'
+  pull_request:
+    paths:
+      - 'notification-service/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: cd notification-service && npm install
+      - run: cd notification-service && npm run build
+      - run: cd notification-service && npm test
+      - name: Integration Test
+        run: |
+          docker run -d --name nats -p 4222:4222 nats:2.10-alpine
+          cd notification-service && NATS_URL=nats://localhost:4222 npm run dev &
+          sleep 5
+          nats-box --command "pub DEAL_MATCHED '{\"dealId\":\"1\",\"sponsorId\":\"s\",\"investorIds\":[\"i\"]}'"
+          docker stop nats

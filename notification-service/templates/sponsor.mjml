@@ -1,0 +1,10 @@
+<mjml>
+  <mj-body background-color="#ffffff"><!-- TODO: brand colours -->
+    <mj-section>
+      <mj-column>
+        <mj-text>Hello {{sponsorId}}, You have a new matched deal.</mj-text>
+        <mj-button href="{{url}}">View PDF</mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

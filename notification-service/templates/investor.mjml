@@ -1,0 +1,10 @@
+<mjml>
+  <mj-body background-color="#ffffff"><!-- TODO: brand colours -->
+    <mj-section>
+      <mj-column>
+        <mj-text>Hello {{firstName}}, your investment in the deal is confirmed.</mj-text>
+        <mj-button href="{{url}}">View Deal Summary</mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

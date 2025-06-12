@@ -1,0 +1,16 @@
+{
+  "name": "@financely/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^7.5.0",
+    "typescript": "^5.2.2"
+  }
+}
