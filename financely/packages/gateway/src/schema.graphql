@@ -1,0 +1,30 @@
+"""Sample schema"""
+type Deal {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  deals: [Deal!]!
+}
+
+input DealInput {
+  name: String!
+}
+
+type Mutation {
+  createDeal(input: DealInput!): Deal!
+}
+input RegisterUserInput {
+  email: String!
+  password: String!
+}
+
+type User {
+  id: ID!
+  email: String!
+}
+
+extend type Mutation {
+  registerUser(input: RegisterUserInput!): User!
+}
