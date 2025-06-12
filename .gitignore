@@ -1,1 +1,17 @@
+codex/implement-deal-service-package-with-apollo,-nats,-postgres,
 node_modules/
+# Node
+node_modules/
+.financely
+**/dist/
+**/build/# Logs
+logs
+*.log
+npm-debug.log*
+# Env
+.env
+**/*.env
+# OS
+.DS_Store
+Thumbs.db
+ main

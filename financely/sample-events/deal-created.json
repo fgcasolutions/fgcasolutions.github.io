@@ -1,0 +1,7 @@
+{
+  "type": "deal.created",
+  "payload": {
+    "id": "123",
+    "name": "Series A"
+  }
+}
