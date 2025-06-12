@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Financely Sans';
+  src: url('FinancelySans.woff2') format('woff2');
+}
+body { font-family: 'Financely Sans', sans-serif; }
